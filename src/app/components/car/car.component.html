@@ -1,0 +1,22 @@
+<div *ngIf="dataLoaded==false" class="spinner-border text-success" role="status">
+  <span class="visually-hidden">Yükleniyor...</span>
+</div>
+
+<table *ngIf="dataLoaded==true"  class="table table-success table-striped">
+  <thead>
+    <tr>
+<th>Açıklama</th>
+<th>Marka </th>
+<th>Araç Rengi</th>
+<th>Araç Günlük Fiyat</th>
+<th>Araç Açıklama</th>
+  </tr>
+  </thead>
+<tr *ngFor="let car of cars">
+  <td>{{car.description}}</td>
+  <td>{{car.brandName}}</td>
+  <td>{{car.colorName}}</td>
+  <td>{{car.dailyPrice}}</td>
+  <td>{{car.description}}</td>
+</tr>
+</table> 

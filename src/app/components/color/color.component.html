@@ -1,0 +1,16 @@
+<div *ngIf="dataLoaded==false" class="spinner-border text-success" role="status">
+    <span class="visually-hidden">Yükleniyor...</span>
+  </div>
+  
+  <table *ngIf="dataLoaded==true"  class="table table-success table-striped">
+    <thead>
+      <tr>
+  <th>Id</th>
+  <th>Renk Adı</th>
+    </tr>
+    </thead>
+  <tr *ngFor="let color of colors">
+    <td>{{color.id}}</td>
+    <td>{{color.colorName}}</td>
+  </tr>
+  </table> 
